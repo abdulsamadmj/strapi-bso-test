@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_general_products",
+  "info": {
+    "displayName": "Products",
+    "icon": "grid"
+  },
+  "options": {},
+  "attributes": {
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product"
+    }
+  }
+}
