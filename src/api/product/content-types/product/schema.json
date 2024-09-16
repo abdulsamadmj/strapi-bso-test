@@ -12,10 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "pID": {
-      "type": "uid",
-      "required": true
-    },
     "title": {
       "type": "string"
     },
@@ -29,6 +25,10 @@
     },
     "price": {
       "type": "decimal"
+    },
+    "pID": {
+      "type": "uid",
+      "required": true
     }
   }
 }

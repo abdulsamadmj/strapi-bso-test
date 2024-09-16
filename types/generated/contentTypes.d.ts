@@ -374,10 +374,10 @@ export interface ApiProductProduct extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    pID: Attribute.UID & Attribute.Required;
     title: Attribute.String;
     image: Attribute.Media<'images', true>;
     price: Attribute.Decimal;
+    pID: Attribute.UID & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
