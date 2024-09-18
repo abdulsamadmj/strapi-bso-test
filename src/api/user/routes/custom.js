@@ -1,15 +1,14 @@
 module.exports = {
   routes: [
     {
-      method: "POST",
+      method: "PUT",
       path: "/users/me/cart",
       handler: "user.addToCart",
-      config: {
-        auth: {
-          // Instead of `auth: true`
-          // scope: ["authenticated"], // This ensures only authenticated users can access
-        },
-      },
+    },
+    {
+      method: "DELETE",
+      path: "/users/me/cart",
+      handler: "user.removeFromCart",
     },
   ],
 };
