@@ -67,7 +67,7 @@
     },
     "cart": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "general.products"
     }
   }
