@@ -36,3 +36,7 @@ npm run build
 # or
 yarn build
 ```
+
+### Front End
+
+Refer [Astro JS App](https://github.com/abdulsamadmj/astro-bso-test) for API integrations and UI
