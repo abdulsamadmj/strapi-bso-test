@@ -118,4 +118,28 @@ module.exports = {
       ctx.badRequest("Unable to remove product from cart", { error: err });
     }
   },
+
+  async getCartCount(ctx) {
+    try {
+      // Get the current user and populate the cart component
+      const user = await strapi.entityService.findOne(
+        "plugin::users-permissions.user",
+        ctx.state.user.id,
+        {
+          populate: ["cart.products"], // Ensure products inside cart are populated
+        }
+      );
+
+      if (!user) {
+        return ctx.badRequest("User not found");
+      }
+
+      // Return the cart count (number of products in the cart)
+      const cartCount = user.cart?.products?.length || 0;
+      ctx.send({ cartCount });
+    } catch (err) {
+      console.error("Error fetching cart count:", err);
+      ctx.badRequest("Unable to fetch cart count", { error: err });
+    }
+  },
 };

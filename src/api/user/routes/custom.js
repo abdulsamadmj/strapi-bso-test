@@ -10,5 +10,10 @@ module.exports = {
       path: "/users/me/cart",
       handler: "user.removeFromCart",
     },
+    {
+      method: "GET",
+      path: "/users/me/cart-count",
+      handler: "user.getCartCount",
+    },
   ],
 };
