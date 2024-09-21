@@ -1,4 +1,23 @@
 module.exports = {
+  async getCart(ctx) {
+    const user = await strapi.entityService.findOne(
+      "plugin::users-permissions.user",
+      ctx.state.user.id,
+      {
+        populate: {
+          cart: {
+            populate: ["products.image"],
+          },
+        }, // Ensure products inside cart are populated
+      }
+    );
+
+    if (!user) {
+      return ctx.badRequest("User not found");
+    }
+
+    return user.cart.products; // Return only the products list
+  },
   async addToCart(ctx) {
     try {
       const { pID } = ctx.request.body;

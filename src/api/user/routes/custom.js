@@ -1,6 +1,11 @@
 module.exports = {
   routes: [
     {
+      method: "GET",
+      path: "/users/me/cart",
+      handler: "user.getCart",
+    },
+    {
       method: "PUT",
       path: "/users/me/cart",
       handler: "user.addToCart",
