@@ -32,4 +32,4 @@ yarn build
 
 ### Front End
 
-Refer [Astro JS App](https://github.com/abdulsamadmj/astro-bso-test) for API integrations and UI
+Refer [Astro JS App](https://github.com/abdulsamadmj/astro-machine-test) for API integrations and UI
