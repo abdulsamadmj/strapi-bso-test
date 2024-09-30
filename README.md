@@ -1,12 +1,5 @@
 # 🚀 Getting started with Strapi
 
-## Admin Credentials
-
-```
-Username: samadmj4@gmail.com
-Password: Admin123
-```
-
 ### `develop`
 
 Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
